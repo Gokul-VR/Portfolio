@@ -55,7 +55,7 @@ const ProjectSection = ({ darkMode }) => {
                                         initial={{ opacity: 0, x: 25 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.9, delay: 0.4 }}
-                                        viewport={{ once: true }}
+                                        // viewport={{ once: true }}
                                     >
                                         <motion.div
                                             animate={{
@@ -145,7 +145,7 @@ const ProjectItems = ({ projectName, description }) => {
             className="mb-9 flex items-center justify-between border-b border-zinc-800 px-3 pb-9"
         >
             <div>
-                <p className="block overflow-hidden text-3xl sm:text-7xl md:text-8xl lg:text-3xl">{projectName}</p>
+                <p className="block overflow-hidden text-2xl sm:text-7xl md:text-8xl lg:text-3xl">{projectName}</p>
                 <p className="text-sm text-zinc-500">{description}</p>
             </div>
 

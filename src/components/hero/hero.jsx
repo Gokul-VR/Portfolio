@@ -6,6 +6,7 @@ import { SplitText } from '../customComponents/SplitText';
 import Typewriter from 'typewriter-effect';
 import "./hero.css";
 import { VelocityText } from './text';
+import myImage from '../../assets/15032.jpg';
 
 export default function Hero() {
     const heroRef = useRef(null);
@@ -31,12 +32,14 @@ export default function Hero() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginTop: { xs: '-40px', md: '34px' },
             }}
         >
             <Container maxWidth="lg">
-                <Grid container spacing={4} alignItems="center">
-                    <Grid item xs={12} md={6} sx={{ marginBottom: { xs: 8, md: 0 }, textAlign: { xs: 'center', md: 'left' } }}>
+                <Grid container spacing={4} alignItems="center" sx={{ marginTop: { xs: -10, md: 0 } }}>
+                    <Grid item xs={12} md={6} sx={{
+                        //  marginBottom: { xs: 8, md: 0 },
+                        textAlign: { xs: 'center', md: 'left' }
+                    }}>
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -49,11 +52,11 @@ export default function Hero() {
                                 whileTap={{ rotateY: 0, rotateX: 0, scale: 0.95 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 20, duration: 0.8 }}
                             >
-                                <Typography sx={{ marginTop: 5, fontSize: { xs: '2.8rem', md: '4rem' } }}>
+                                <Typography sx={{ marginTop: 5, fontSize: { xs: '2.6rem', md: '4rem' } }}>
                                     <SplitText text="Hello" delay={60} />
                                 </Typography>
                             </motion.div>
-                            <Typography sx={{ fontSize: { xs: '1.8rem', md: '2.5rem' } }}>
+                            <Typography sx={{ fontSize: { xs: '1.7rem', md: '2.5rem' } }}>
                                 I'm Gokul,
                             </Typography>
                             <Typography sx={{ fontSize: { xs: '1.8rem', md: '2.5rem' } }}>
@@ -70,11 +73,13 @@ export default function Hero() {
                         </motion.div>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <div className="home__img"></div>
+                        <div className="home__img" style={{
+                            backgroundImage: `url(${myImage})`,
+                        }}></div>
                     </Grid>
                 </Grid>
             </Container>
-        </Box>
+        </Box >
 
     );
 }

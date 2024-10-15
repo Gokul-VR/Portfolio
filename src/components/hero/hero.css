@@ -1,5 +1,5 @@
 .home__img {
-    background: url(../../src/assets/15032.jpg);
+    /* background: url(../../src/assets/15032.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -23,7 +23,7 @@
 /* Media query for larger screens */
 @media (min-width: 600px) {
     .home__img {
-        height: 400px;
+        height: 300px;
         /* Adjust height for medium screens */
     }
 }
