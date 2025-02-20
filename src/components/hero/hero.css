@@ -1,0 +1,50 @@
+.home__img {
+    /* background: url(../../src/assets/15032.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgba(0, 0, 0, 0.3);
+    justify-self: center;
+    width: 100%;
+    /* Make width responsive */
+    height: 350px;
+    /* Default height for smaller screens */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    /* Initial border radius */
+    animation: profile__animate 8s ease-in-out infinite 1s;
+    animation-fill-mode: forwards;
+    /* Keep the initial state */
+    max-width: 400px;
+    /* Optional: limit max width */
+}
+
+
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+    .home__img {
+        height: 300px;
+        /* Adjust height for medium screens */
+    }
+}
+
+@media (min-width: 900px) {
+    .home__img {
+        height: 410px;
+        /* Adjust height for large screens */
+    }
+}
+
+@keyframes profile__animate {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
