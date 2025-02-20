@@ -421,11 +421,12 @@ export default function Hero() {
 
     <div className="min-h-screen flex items-center justify-center relative">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative">
-          <Lanyard />
-
-          {/* <div className="text-center md:text-left mt-[-120px] md:mt-0"> */}
-          <div className="text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative mt-[-210px] md:mt-0">
+          <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
+            <Lanyard />
+          </div>
+          <div className="text-center md:text-left mt-[-160px] md:mt-0">
+            {/* <div className="text-center md:text-left"> */}
 
             <motion.div
               initial={{ opacity: 0, x: -20 }}
