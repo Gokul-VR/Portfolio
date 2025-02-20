@@ -48,6 +48,26 @@ export default function Hero() {
     //       <Grid
     //         item
     //         xs={12}
+    //         md={7}
+    //         sx={{
+    //           display: "flex",
+    //           justifyContent: "center",
+    //           position: "relative",
+    //           overflow: "visible",
+    //           zIndex: 10,
+    //         }}
+    //       >
+    //         {/* <div
+    //           className="home__img"
+    //           style={{
+    //             backgroundImage: `url(${myImage})`,
+    //           }}
+    //         ></div> */}
+    //         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+    //       </Grid>
+    //       <Grid
+    //         item
+    //         xs={12}
     //         md={5}
     //         sx={{
     //           //  marginBottom: { xs: 8, md: 0 },
@@ -93,23 +113,6 @@ export default function Hero() {
     //             </span>
     //           </Typography>
     //         </motion.div>
-    //       </Grid>
-    //       <Grid
-    //         item
-    //         xs={12}
-    //         md={7}
-    //         sx={{
-    //           display: "flex",
-    //           justifyContent: "center",
-    //           position: "relative",
-    //           overflow: "visible",
-    //           zIndex: 10,
-    //         }}
-    //       >
-    //         {/* <div className="home__img" style={{
-    //                         backgroundImage: `url(${myImage})`,
-    //                     }}></div> */}
-    //         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
     //       </Grid>
     //     </Grid>
     //   </Container>
@@ -318,52 +321,52 @@ export default function Hero() {
     // </div>
 
     //tailwind partly working
-    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center p-16">
-      <motion.div
-        className="w-full flex flex-col items-start justify-end p-11"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          whileHover={{ rotateY: 15, rotateX: 15, scale: 1.05 }}
-          whileTap={{ rotateY: 0, rotateX: 0, scale: 0.95 }}
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 20,
-            duration: 0.8,
-          }}
-        >
-          <Typography
-            sx={{ marginTop: 5, fontSize: { xs: "2.6rem", md: "4rem" } }}
-          >
-            <SplitText text="Hello" delay={60} />
-          </Typography>
-        </motion.div>
-        <Typography sx={{ fontSize: { xs: "1.7rem", md: "2.5rem" } }}>
-          I'm Gokul,
-        </Typography>
-        <Typography sx={{ fontSize: { xs: "1.8rem", md: "2.5rem" } }}>
-          a Software{" "}
-          <span style={{ display: "inline-block" }}>
-            <Typewriter
-              options={{
-                strings: [" Developer", " Engineer"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </span>
-        </Typography>
-      </motion.div>
+    // <div className="min-h-screen flex flex-col md:flex-row items-center justify-center p-16">
+    //   <motion.div
+    //     className="w-full flex flex-col items-start justify-end p-11"
+    //     initial={{ opacity: 0, x: -20 }}
+    //     animate={{ opacity: 1, x: 0 }}
+    //     transition={{ duration: 0.8 }}
+    //   >
+    //     <motion.div
+    //       initial={{ opacity: 0, y: 20 }}
+    //       animate={{ opacity: 1, y: 0 }}
+    //       whileHover={{ rotateY: 15, rotateX: 15, scale: 1.05 }}
+    //       whileTap={{ rotateY: 0, rotateX: 0, scale: 0.95 }}
+    //       transition={{
+    //         type: "spring",
+    //         stiffness: 300,
+    //         damping: 20,
+    //         duration: 0.8,
+    //       }}
+    //     >
+    //       <Typography
+    //         sx={{ marginTop: 5, fontSize: { xs: "2.6rem", md: "4rem" } }}
+    //       >
+    //         <SplitText text="Hello" delay={60} />
+    //       </Typography>
+    //     </motion.div>
+    //     <Typography sx={{ fontSize: { xs: "1.7rem", md: "2.5rem" } }}>
+    //       I'm Gokul,
+    //     </Typography>
+    //     <Typography sx={{ fontSize: { xs: "1.8rem", md: "2.5rem" } }}>
+    //       a Software{" "}
+    //       <span style={{ display: "inline-block" }}>
+    //         <Typewriter
+    //           options={{
+    //             strings: [" Developer", " Engineer"],
+    //             autoStart: true,
+    //             loop: true,
+    //           }}
+    //         />
+    //       </span>
+    //     </Typography>
+    //   </motion.div>
 
-      <div className="w-full flex items-center justify-center md:mt-0">
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-      </div>
-    </div>
+    //   <div className="w-full flex items-center justify-center md:mt-0">
+    //     <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+    //   </div>
+    // </div>
 
     // <div className="w-full h-screen flex relative">
     //   {/* Left Column (4/12) */}
@@ -415,6 +418,57 @@ export default function Hero() {
     //     <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
     //   </div>
     // </div>
- 
+
+    <div className="min-h-screen flex items-center justify-center relative">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative">
+          <Lanyard />
+
+          {/* <div className="text-center md:text-left mt-[-120px] md:mt-0"> */}
+          <div className="text-center md:text-left">
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ rotateY: 15, rotateX: 15, scale: 1.05 }}
+                whileTap={{ rotateY: 0, rotateX: 0, scale: 0.95 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                  duration: 0.8,
+                }}
+              >
+                <Typography
+                  sx={{ marginTop: 5, fontSize: { xs: "2.6rem", md: "3rem" } }}
+                >
+                  <SplitText text="Hello" delay={60} />
+                </Typography>
+              </motion.div>
+              <Typography sx={{ fontSize: { xs: "1.7rem", md: "2rem" } }}>
+                I'm Gokul,
+              </Typography>
+              <Typography sx={{ fontSize: { xs: "1.8rem", md: "2rem" } }}>
+                a Software{" "}
+                <span style={{ display: "inline-block" }}>
+                  <Typewriter
+                    options={{
+                      strings: [" Developer", " Engineer"],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </span>
+              </Typography>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
