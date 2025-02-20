@@ -94,7 +94,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.8]) // prettier-ignore
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.7]) // prettier-ignore
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
   useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
   useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.45, 0]]) // prettier-ignore
@@ -171,8 +171,8 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
         >
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={2.5}
-            position={[0, -1.5, -0.05]}
+            scale={2.7}
+            position={[0, -1.75, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (
