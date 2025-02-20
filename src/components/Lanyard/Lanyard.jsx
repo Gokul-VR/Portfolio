@@ -27,7 +27,7 @@ extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({}) {
   return (
-    <div className="absolute z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
+    <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
       <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
         <ambientLight intensity={Math.PI} />
         <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
