@@ -11,7 +11,8 @@ export default defineConfig({
   server: {
     host: true,
     hmr: true,
-    port: 5188
+    port: 5190
   },
   assetsInclude: ['**/*.glb']
+
 })
