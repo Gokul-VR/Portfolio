@@ -14,7 +14,6 @@ import Footer from "./components/footer/footer";
 import { useDarkTheme } from "./DarkModeContext";
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(true);
-  // const [darkMode, setDarkMode] = useState(true);
   const { darkMode } = useDarkTheme();
   const handleLoaderComplete = () => {
     setTimeout(() => {
@@ -42,13 +41,12 @@ export default function App() {
             <>
               <Header />
               <main>
-                <ReactLenis root options={{ lerp: 0.05 }}>
-                  <Hero />
-                  <About />
-                  <Projects darkMode={darkMode} />
-                  <SkillSection darkMode={darkMode} />
-                  <Footer />
-                </ReactLenis>
+                <Hero />
+                <ReactLenis root options={{ lerp: 0.05 }} />
+                <About />
+                <Projects darkMode={darkMode} />
+                <SkillSection darkMode={darkMode} />
+                <Footer />
               </main>
             </>
           )}

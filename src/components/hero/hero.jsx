@@ -7,8 +7,9 @@ import Typewriter from "typewriter-effect";
 import "./hero.css";
 import { VelocityText } from "./text";
 import myImage from "../../assets/15032.jpg";
-import Lanyard from "../Lanyard/Lanyard";
+// import Lanyard from "../Lanyard/Lanyard";
 import CircularText from "../customComponents/circularText";
+import IdCard from "../Lanyard/card";
 export default function Hero() {
   //   const [cameraDistance, setCameraDistance] = useState(24);
   //   const [stopGravity, setStopGravity] = useState(false);
@@ -363,7 +364,7 @@ export default function Hero() {
     //     </Typography>
     //   </motion.div>
 
-    //   <div className="w-full flex items-center justify-center md:mt-0">
+    //   <div className="absolute z-0 w-full h-screen flex justify-center items-center transform scale-100 origin">
     //     <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
     //   </div>
     // </div>
@@ -413,8 +414,7 @@ export default function Hero() {
     //     </motion.div>
     //   </div>
 
-    //   {/* Right Column (8/12) */}
-    //   <div className="w-full absolute z-20">
+    //   <div className="absolute z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
     //     <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
     //   </div>
     // </div>
@@ -423,7 +423,8 @@ export default function Hero() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative mt-[-210px] md:mt-0">
           <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
-            <Lanyard />
+            {/* <Lanyard /> */}
+            <IdCard/>
           </div>
           <div className="text-center md:text-left mt-[-160px] md:mt-0">
             {/* <div className="text-center md:text-left"> */}
@@ -471,5 +472,6 @@ export default function Hero() {
         </div>
       </div>
     </div>
+
   );
 }
